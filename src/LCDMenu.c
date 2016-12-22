@@ -67,9 +67,3 @@ void newItem(char* itemText, void (*itemFunction)())
     LCDMenuItems[numOfItems-1].function = itemFunction;
     potSelectionSize = 4095 / numOfItems;
 }
-
-
-void setSelectionSensor(sensor selection)
-{
-
-}
