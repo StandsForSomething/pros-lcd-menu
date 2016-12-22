@@ -35,7 +35,7 @@ typedef enum selectChooseType {
 }selectChooseType;
 
 /**
- * @breif this enum show if an item can be choosen, and if it can wether or not
+ * @brief this enum show if an item can be choosen, and if it can wether or not
  * it's a sub menu or if it executes a function.
  *
  * @see LCDMenu
