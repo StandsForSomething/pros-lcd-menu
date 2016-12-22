@@ -1,0 +1,65 @@
+\hypertarget{structLCDItem}{}\section{L\+C\+D\+Item Struct Reference}
+\label{structLCDItem}\index{L\+C\+D\+Item@{L\+C\+D\+Item}}
+
+
+holds the information for individual items, mainly the text to be displayed.  
+
+
+
+
+{\ttfamily \#include $<$L\+C\+D\+Menu.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structLCDItem_a07022062a6c79e504d46d9f968ab693d}{L\+C\+D\+Text}
+\item 
+void($\ast$ \hyperlink{structLCDItem_ac78ba4f8e3ded0edc2cac0e0e29ca631}{function} )()
+\item 
+item\+Type \hyperlink{structLCDItem_ae5a432eb4dbd8f9a5c37174ba7122b0e}{item\+Type}
+\item 
+\hyperlink{structLCDMenu}{L\+C\+D\+Menu} \hyperlink{structLCDItem_af072bed397a22183aeba429a133f489d}{sub\+Menu}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+holds the information for individual items, mainly the text to be displayed. 
+
+\subsection{Field Documentation}
+\hypertarget{structLCDItem_ac78ba4f8e3ded0edc2cac0e0e29ca631}{}\label{structLCDItem_ac78ba4f8e3ded0edc2cac0e0e29ca631} 
+\index{L\+C\+D\+Item@{L\+C\+D\+Item}!function@{function}}
+\index{function@{function}!L\+C\+D\+Item@{L\+C\+D\+Item}}
+\subsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily void($\ast$ L\+C\+D\+Item\+::function) ()}
+
+a pointer to the function to be exacuted if this item is choosen (asuming one should be executed).
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structLCDItem_ae5a432eb4dbd8f9a5c37174ba7122b0e}{item\+Type} 
+\end{DoxySeeAlso}
+\hypertarget{structLCDItem_ae5a432eb4dbd8f9a5c37174ba7122b0e}{}\label{structLCDItem_ae5a432eb4dbd8f9a5c37174ba7122b0e} 
+\index{L\+C\+D\+Item@{L\+C\+D\+Item}!item\+Type@{item\+Type}}
+\index{item\+Type@{item\+Type}!L\+C\+D\+Item@{L\+C\+D\+Item}}
+\subsubsection{\texorpdfstring{item\+Type}{itemType}}
+{\footnotesize\ttfamily item\+Type L\+C\+D\+Item\+::item\+Type}
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structLCDItem_ae5a432eb4dbd8f9a5c37174ba7122b0e}{item\+Type} 
+\end{DoxySeeAlso}
+\hypertarget{structLCDItem_a07022062a6c79e504d46d9f968ab693d}{}\label{structLCDItem_a07022062a6c79e504d46d9f968ab693d} 
+\index{L\+C\+D\+Item@{L\+C\+D\+Item}!L\+C\+D\+Text@{L\+C\+D\+Text}}
+\index{L\+C\+D\+Text@{L\+C\+D\+Text}!L\+C\+D\+Item@{L\+C\+D\+Item}}
+\subsubsection{\texorpdfstring{L\+C\+D\+Text}{LCDText}}
+{\footnotesize\ttfamily char$\ast$ L\+C\+D\+Item\+::\+L\+C\+D\+Text}
+
+the text to be displayed on the L\+CD. \hypertarget{structLCDItem_af072bed397a22183aeba429a133f489d}{}\label{structLCDItem_af072bed397a22183aeba429a133f489d} 
+\index{L\+C\+D\+Item@{L\+C\+D\+Item}!sub\+Menu@{sub\+Menu}}
+\index{sub\+Menu@{sub\+Menu}!L\+C\+D\+Item@{L\+C\+D\+Item}}
+\subsubsection{\texorpdfstring{sub\+Menu}{subMenu}}
+{\footnotesize\ttfamily \hyperlink{structLCDMenu}{L\+C\+D\+Menu} L\+C\+D\+Item\+::sub\+Menu}
+
+if this item is a sub menu, said sub menu will be stored here. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/L\+C\+D\+Menu.\+h\end{DoxyCompactItemize}
