@@ -91,8 +91,10 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a70536180beac160b7989181e2b242de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">each menu and sub-menu can be configured to use different types of input for item selection and choice.  <a href="#a70536180beac160b7989181e2b242de5">More...</a><br /></td></tr>
 <tr class="separator:a70536180beac160b7989181e2b242de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3db213cb392a886eed37fe7f931a1a"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="_l_c_d_menu_8h.html#a090b740ab4ce239469ae5916e79846fa">itemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d_menu_8h.html#a1d3db213cb392a886eed37fe7f931a1a">itemType</a></td></tr>
+<tr class="memdesc:a1d3db213cb392a886eed37fe7f931a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this enum show if an item can be choosen, and if it can wether or not it's a sub menu or if it executes a function.  <a href="#a1d3db213cb392a886eed37fe7f931a1a">More...</a><br /></td></tr>
 <tr class="separator:a1d3db213cb392a886eed37fe7f931a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae8eb7f4a608ac548b354f510177b35"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_l_c_d_item.html">LCDItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d_menu_8h.html#afae8eb7f4a608ac548b354f510177b35">LCDItem</a></td></tr>
+<tr class="memdesc:afae8eb7f4a608ac548b354f510177b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">forward declaration/typedef of <a class="el" href="struct_l_c_d_item.html" title="holds the information for individual items, mainly the text to be displayed. ">LCDItem</a> struct  <a href="#afae8eb7f4a608ac548b354f510177b35">More...</a><br /></td></tr>
 <tr class="separator:afae8eb7f4a608ac548b354f510177b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11971d0405320ec0ca6571b97d06fca5"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_l_c_d_menu.html">LCDMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d_menu_8h.html#a11971d0405320ec0ca6571b97d06fca5">LCDMenu</a></td></tr>
 <tr class="memdesc:a11971d0405320ec0ca6571b97d06fca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">this hold all the variables needed for a <a class="el" href="struct_l_c_d_menu.html" title="this hold all the variables needed for a LCDMenu or sub menu. ">LCDMenu</a> or sub menu.  <a href="#a11971d0405320ec0ca6571b97d06fca5">More...</a><br /></td></tr>
@@ -109,7 +111,8 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a090b740ab4ce239469ae5916e79846fa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d_menu_8h.html#a090b740ab4ce239469ae5916e79846fa">itemType</a> { <a class="el" href="_l_c_d_menu_8h.html#a090b740ab4ce239469ae5916e79846faa9634a2ea914aef0b136ac9bcb5b5859b">FUNCTION_EXEC</a>, 
 <a class="el" href="_l_c_d_menu_8h.html#a090b740ab4ce239469ae5916e79846faaeffea8f1acf80a6b50f473a9cf630e37">SUB_MENU</a>, 
 <a class="el" href="_l_c_d_menu_8h.html#a090b740ab4ce239469ae5916e79846faa9a463d315e0659998bfc071cdd3df152">SELECTION_ONLY</a>
- }</td></tr>
+ }<tr class="memdesc:a090b740ab4ce239469ae5916e79846fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">this enum show if an item can be choosen, and if it can wether or not it's a sub menu or if it executes a function.  <a href="_l_c_d_menu_8h.html#a090b740ab4ce239469ae5916e79846fa">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a090b740ab4ce239469ae5916e79846fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -118,7 +121,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad1ba3d01ddd8d4bf88821b64cf8a8738"><td class="mdescLeft">&#160;</td><td class="mdescRight">this should be started as a task in initialize.  <a href="#ad1ba3d01ddd8d4bf88821b64cf8a8738">More...</a><br /></td></tr>
 <tr class="separator:ad1ba3d01ddd8d4bf88821b64cf8a8738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa12ea894cc2907d17b17613b9b7165"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_l_c_d_menu_8h.html#aefa12ea894cc2907d17b17613b9b7165">newItem</a> (char *itemText, void(*itemFunction)())</td></tr>
-<tr class="memdesc:aefa12ea894cc2907d17b17613b9b7165"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds an item to the menu  <a href="#aefa12ea894cc2907d17b17613b9b7165">More...</a><br /></td></tr>
+<tr class="memdesc:aefa12ea894cc2907d17b17613b9b7165"><td class="mdescLeft">&#160;</td><td class="mdescRight">hadds an item to the menu  <a href="#aefa12ea894cc2907d17b17613b9b7165">More...</a><br /></td></tr>
 <tr class="separator:aefa12ea894cc2907d17b17613b9b7165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -142,7 +145,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>this enum show if an item can be choosen, and if it can wether or not it's a sub menu or if it executes a function.</p>
+
+<p>this enum show if an item can be choosen, and if it can wether or not it's a sub menu or if it executes a function. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_l_c_d_menu.html" title="this hold all the variables needed for a LCDMenu or sub menu. ">LCDMenu</a> </dd></dl>
 
 </div>
@@ -158,7 +162,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd>forward declaration/typedef of <a class="el" href="struct_l_c_d_item.html" title="holds the information for individual items, mainly the text to be displayed. ">LCDItem</a> struct </dd></dl>
+
+<p>forward declaration/typedef of <a class="el" href="struct_l_c_d_item.html" title="holds the information for individual items, mainly the text to be displayed. ">LCDItem</a> struct </p>
 
 </div>
 </div>
@@ -207,7 +212,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>this enum show if an item can be choosen, and if it can wether or not it's a sub menu or if it executes a function.</p>
+
+<p>this enum show if an item can be choosen, and if it can wether or not it's a sub menu or if it executes a function. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_l_c_d_menu.html" title="this hold all the variables needed for a LCDMenu or sub menu. ">LCDMenu</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a090b740ab4ce239469ae5916e79846faa9634a2ea914aef0b136ac9bcb5b5859b"></a>FUNCTION_EXEC&#160;</td><td class="fielddoc"><p>exacute the function that <a class="el" href="struct_l_c_d_item.html#a92c749b399f1281b6a38296730befc65">LCDItem.function</a> points to when this item is chosen.</p>
@@ -298,7 +304,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>adds an item to the menu </p>
+<p>hadds an item to the menu </p>
 
 </div>
 </div>
