@@ -1,0 +1,65 @@
+.TH "LCDMenu" 3 "Wed Dec 21 2016" "PROS LCD Menu Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LCDMenu \- this hold all the variables needed for a \fBLCDMenu\fP or sub menu\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LCDMenu\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBLCDItem\fP * \fBLCDItems\fP"
+.br
+.ti -1c
+.RI "\fBselectChooseType\fP \fBselectionType\fP"
+.br
+.ti -1c
+.RI "\fBselectChooseType\fP \fBchooseType\fP"
+.br
+.ti -1c
+.RI "int \fBcurrentSelection\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+this hold all the variables needed for a \fBLCDMenu\fP or sub menu\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fBselectChooseType\fP chooseType"
+the method of input for choosing a selected item\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBselectChooseType\fP 
+.RE
+.PP
+
+.SS "int currentSelection"
+the index of the item the item that should be displayed in LCDItems\&. 
+.SS "\fBLCDItem\fP* LCDItems"
+an array of LCDItems, this will be reallocated everytime a new item is added\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBLCDItem\fP 
+.RE
+.PP
+
+.SS "\fBselectChooseType\fP selectionType"
+the method of input for selecting an item\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBselectChooseType\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PROS LCD Menu Library from the source code\&.

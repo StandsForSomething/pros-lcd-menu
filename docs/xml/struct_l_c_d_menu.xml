@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct_l_c_d_menu" kind="struct" language="C++" prot="public">
+    <compoundname>LCDMenu</compoundname>
+    <includes refid="_l_c_d_menu_8h" local="no">LCDMenu.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_l_c_d_menu_1af6fd93180925837331f93529da0f9ce5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref> *</type>
+        <definition>LCDItem* LCDItems</definition>
+        <argsstring></argsstring>
+        <name>LCDItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>an array of LCDItems, this will be reallocated everytime a new item is added.</para><para><simplesect kind="see"><para><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="82" column="1" bodyfile="include/LCDMenu.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_l_c_d_menu_1ab58ecc3135bdf1f2198a918c52b3dad6" prot="public" static="no" mutable="no">
+        <type><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref></type>
+        <definition>selectChooseType selectionType</definition>
+        <argsstring></argsstring>
+        <name>selectionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the method of input for selecting an item.</para><para><simplesect kind="see"><para><ref refid="_l_c_d_menu_8h_1a70536180beac160b7989181e2b242de5" kindref="member">selectChooseType</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="89" column="1" bodyfile="include/LCDMenu.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_l_c_d_menu_1a91177ef36dcf8cabe8e74a627755aaa2" prot="public" static="no" mutable="no">
+        <type><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref></type>
+        <definition>selectChooseType chooseType</definition>
+        <argsstring></argsstring>
+        <name>chooseType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the method of input for choosing a selected item.</para><para><simplesect kind="see"><para><ref refid="_l_c_d_menu_8h_1a70536180beac160b7989181e2b242de5" kindref="member">selectChooseType</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="96" column="1" bodyfile="include/LCDMenu.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int currentSelection</definition>
+        <argsstring></argsstring>
+        <name>currentSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the index of the item the item that should be displayed in LCDItems. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="101" column="1" bodyfile="include/LCDMenu.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>this hold all the variables needed for a <ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref> or sub menu. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>LCDMenu</label>
+        <link refid="struct_l_c_d_menu"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>LCDItems</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>LCDItem</label>
+        <link refid="struct_l_c_d_item"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>subMenu</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/LCDMenu.h" line="75" column="1" bodyfile="include/LCDMenu.h" bodystart="75" bodyend="102"/>
+    <listofallmembers>
+      <member refid="struct_l_c_d_menu_1a91177ef36dcf8cabe8e74a627755aaa2" prot="public" virt="non-virtual"><scope>LCDMenu</scope><name>chooseType</name></member>
+      <member refid="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" prot="public" virt="non-virtual"><scope>LCDMenu</scope><name>currentSelection</name></member>
+      <member refid="struct_l_c_d_menu_1af6fd93180925837331f93529da0f9ce5" prot="public" virt="non-virtual"><scope>LCDMenu</scope><name>LCDItems</name></member>
+      <member refid="struct_l_c_d_menu_1ab58ecc3135bdf1f2198a918c52b3dad6" prot="public" virt="non-virtual"><scope>LCDMenu</scope><name>selectionType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,96 @@
+\hypertarget{_l_c_d_menu_8c}{}\section{src/\+L\+C\+D\+Menu.c File Reference}
+\label{_l_c_d_menu_8c}\index{src/\+L\+C\+D\+Menu.\+c@{src/\+L\+C\+D\+Menu.\+c}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+Menu\+Settings.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_l_c_d_menu_8c_ad1ba3d01ddd8d4bf88821b64cf8a8738}{L\+C\+D\+Menu\+Task} (void $\ast$ignore)
+\begin{DoxyCompactList}\small\item\em this should be started as a task in initialize. \end{DoxyCompactList}\item 
+void \hyperlink{_l_c_d_menu_8c_aefa12ea894cc2907d17b17613b9b7165}{new\+Item} (char $\ast$item\+Text, void($\ast$item\+Function)())
+\begin{DoxyCompactList}\small\item\em adds an item to the menu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{_l_c_d_menu_8c_ad8e669786e82f68cebcd456c638cfc14}{num\+Of\+Items} = 0
+\item 
+\hyperlink{struct_l_c_d_item}{L\+C\+D\+Item} $\ast$ \hyperlink{_l_c_d_menu_8c_a80833d02472394167834348533679f97}{L\+C\+D\+Menu\+Items} = N\+U\+LL
+\item 
+int \hyperlink{_l_c_d_menu_8c_a0e589f9054cc1ee0716a7ecda74b1352}{current\+Selection}
+\item 
+int \hyperlink{_l_c_d_menu_8c_ae9f8e66da4e3357d519b755382d55c0d}{pot\+Selection\+Size}
+\item 
+int \hyperlink{_l_c_d_menu_8c_a3b97dc91b74de0462b8192c4e0838afb}{selection\+Range\+Upper}
+\item 
+int \hyperlink{_l_c_d_menu_8c_a150b832a40f6314f42b950b648def568}{selection\+Range\+Lower}
+\item 
+sensor \hyperlink{_l_c_d_menu_8c_ae18acacf43740d59484a1c156e4d819e}{selection\+Pot}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_l_c_d_menu_8c_ad1ba3d01ddd8d4bf88821b64cf8a8738}{}\label{_l_c_d_menu_8c_ad1ba3d01ddd8d4bf88821b64cf8a8738} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!L\+C\+D\+Menu\+Task@{L\+C\+D\+Menu\+Task}}
+\index{L\+C\+D\+Menu\+Task@{L\+C\+D\+Menu\+Task}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+Menu\+Task()}{LCDMenuTask()}}
+{\footnotesize\ttfamily void L\+C\+D\+Menu\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{ignore }\end{DoxyParamCaption})}
+
+
+
+this should be started as a task in initialize. 
+
+\hypertarget{_l_c_d_menu_8c_aefa12ea894cc2907d17b17613b9b7165}{}\label{_l_c_d_menu_8c_aefa12ea894cc2907d17b17613b9b7165} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!new\+Item@{new\+Item}}
+\index{new\+Item@{new\+Item}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{new\+Item()}{newItem()}}
+{\footnotesize\ttfamily void new\+Item (\begin{DoxyParamCaption}\item[{char $\ast$}]{item\+Text,  }\item[{void($\ast$)()}]{item\+Function }\end{DoxyParamCaption})}
+
+
+
+adds an item to the menu 
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{_l_c_d_menu_8c_a0e589f9054cc1ee0716a7ecda74b1352}{}\label{_l_c_d_menu_8c_a0e589f9054cc1ee0716a7ecda74b1352} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!current\+Selection@{current\+Selection}}
+\index{current\+Selection@{current\+Selection}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{current\+Selection}{currentSelection}}
+{\footnotesize\ttfamily int current\+Selection}
+
+\hypertarget{_l_c_d_menu_8c_a80833d02472394167834348533679f97}{}\label{_l_c_d_menu_8c_a80833d02472394167834348533679f97} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!L\+C\+D\+Menu\+Items@{L\+C\+D\+Menu\+Items}}
+\index{L\+C\+D\+Menu\+Items@{L\+C\+D\+Menu\+Items}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+Menu\+Items}{LCDMenuItems}}
+{\footnotesize\ttfamily \hyperlink{struct_l_c_d_item}{L\+C\+D\+Item}$\ast$ L\+C\+D\+Menu\+Items = N\+U\+LL}
+
+\hypertarget{_l_c_d_menu_8c_ad8e669786e82f68cebcd456c638cfc14}{}\label{_l_c_d_menu_8c_ad8e669786e82f68cebcd456c638cfc14} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!num\+Of\+Items@{num\+Of\+Items}}
+\index{num\+Of\+Items@{num\+Of\+Items}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{num\+Of\+Items}{numOfItems}}
+{\footnotesize\ttfamily size\+\_\+t num\+Of\+Items = 0}
+
+\hypertarget{_l_c_d_menu_8c_ae9f8e66da4e3357d519b755382d55c0d}{}\label{_l_c_d_menu_8c_ae9f8e66da4e3357d519b755382d55c0d} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!pot\+Selection\+Size@{pot\+Selection\+Size}}
+\index{pot\+Selection\+Size@{pot\+Selection\+Size}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{pot\+Selection\+Size}{potSelectionSize}}
+{\footnotesize\ttfamily int pot\+Selection\+Size}
+
+\hypertarget{_l_c_d_menu_8c_ae18acacf43740d59484a1c156e4d819e}{}\label{_l_c_d_menu_8c_ae18acacf43740d59484a1c156e4d819e} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!selection\+Pot@{selection\+Pot}}
+\index{selection\+Pot@{selection\+Pot}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{selection\+Pot}{selectionPot}}
+{\footnotesize\ttfamily sensor selection\+Pot}
+
+\hypertarget{_l_c_d_menu_8c_a150b832a40f6314f42b950b648def568}{}\label{_l_c_d_menu_8c_a150b832a40f6314f42b950b648def568} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!selection\+Range\+Lower@{selection\+Range\+Lower}}
+\index{selection\+Range\+Lower@{selection\+Range\+Lower}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{selection\+Range\+Lower}{selectionRangeLower}}
+{\footnotesize\ttfamily int selection\+Range\+Lower}
+
+\hypertarget{_l_c_d_menu_8c_a3b97dc91b74de0462b8192c4e0838afb}{}\label{_l_c_d_menu_8c_a3b97dc91b74de0462b8192c4e0838afb} 
+\index{L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}!selection\+Range\+Upper@{selection\+Range\+Upper}}
+\index{selection\+Range\+Upper@{selection\+Range\+Upper}!L\+C\+D\+Menu.\+c@{L\+C\+D\+Menu.\+c}}
+\subsubsection{\texorpdfstring{selection\+Range\+Upper}{selectionRangeUpper}}
+{\footnotesize\ttfamily int selection\+Range\+Upper}
+

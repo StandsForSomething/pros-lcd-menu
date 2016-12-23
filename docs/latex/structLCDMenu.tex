@@ -1,0 +1,72 @@
+\hypertarget{structLCDMenu}{}\section{L\+C\+D\+Menu Struct Reference}
+\label{structLCDMenu}\index{L\+C\+D\+Menu@{L\+C\+D\+Menu}}
+
+
+this hold all the variables needed for a \hyperlink{structLCDMenu}{L\+C\+D\+Menu} or sub menu.  
+
+
+
+
+{\ttfamily \#include $<$L\+C\+D\+Menu.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structLCDItem}{L\+C\+D\+Item} $\ast$ \hyperlink{structLCDMenu_a5062cf64656db6299e699dcdacd1ba85}{L\+C\+D\+Items}
+\item 
+select\+Choose\+Type \hyperlink{structLCDMenu_ad6a65fea09794de97086121d7b72a2ac}{selection\+Type}
+\item 
+select\+Choose\+Type \hyperlink{structLCDMenu_ad1809ae9f0c9204d7c93390d291d3dcf}{choose\+Type}
+\item 
+int \hyperlink{structLCDMenu_a1f55c3e181f20c796ec51e74b70887f7}{current\+Selection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this hold all the variables needed for a \hyperlink{structLCDMenu}{L\+C\+D\+Menu} or sub menu. 
+
+\subsection{Field Documentation}
+\hypertarget{structLCDMenu_ad1809ae9f0c9204d7c93390d291d3dcf}{}\label{structLCDMenu_ad1809ae9f0c9204d7c93390d291d3dcf} 
+\index{L\+C\+D\+Menu@{L\+C\+D\+Menu}!choose\+Type@{choose\+Type}}
+\index{choose\+Type@{choose\+Type}!L\+C\+D\+Menu@{L\+C\+D\+Menu}}
+\subsubsection{\texorpdfstring{choose\+Type}{chooseType}}
+{\footnotesize\ttfamily select\+Choose\+Type L\+C\+D\+Menu\+::choose\+Type}
+
+the method of input for choosing a selected item.
+
+\begin{DoxySeeAlso}{See also}
+select\+Choose\+Type 
+\end{DoxySeeAlso}
+\hypertarget{structLCDMenu_a1f55c3e181f20c796ec51e74b70887f7}{}\label{structLCDMenu_a1f55c3e181f20c796ec51e74b70887f7} 
+\index{L\+C\+D\+Menu@{L\+C\+D\+Menu}!current\+Selection@{current\+Selection}}
+\index{current\+Selection@{current\+Selection}!L\+C\+D\+Menu@{L\+C\+D\+Menu}}
+\subsubsection{\texorpdfstring{current\+Selection}{currentSelection}}
+{\footnotesize\ttfamily int L\+C\+D\+Menu\+::current\+Selection}
+
+the index of the item the item that should be displayed in L\+C\+D\+Items. \hypertarget{structLCDMenu_a5062cf64656db6299e699dcdacd1ba85}{}\label{structLCDMenu_a5062cf64656db6299e699dcdacd1ba85} 
+\index{L\+C\+D\+Menu@{L\+C\+D\+Menu}!L\+C\+D\+Items@{L\+C\+D\+Items}}
+\index{L\+C\+D\+Items@{L\+C\+D\+Items}!L\+C\+D\+Menu@{L\+C\+D\+Menu}}
+\subsubsection{\texorpdfstring{L\+C\+D\+Items}{LCDItems}}
+{\footnotesize\ttfamily \hyperlink{structLCDItem}{L\+C\+D\+Item}$\ast$ L\+C\+D\+Menu\+::\+L\+C\+D\+Items}
+
+an array of L\+C\+D\+Items, this will be reallocated everytime a new item is added.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structLCDItem}{L\+C\+D\+Item} 
+\end{DoxySeeAlso}
+\hypertarget{structLCDMenu_ad6a65fea09794de97086121d7b72a2ac}{}\label{structLCDMenu_ad6a65fea09794de97086121d7b72a2ac} 
+\index{L\+C\+D\+Menu@{L\+C\+D\+Menu}!selection\+Type@{selection\+Type}}
+\index{selection\+Type@{selection\+Type}!L\+C\+D\+Menu@{L\+C\+D\+Menu}}
+\subsubsection{\texorpdfstring{selection\+Type}{selectionType}}
+{\footnotesize\ttfamily select\+Choose\+Type L\+C\+D\+Menu\+::selection\+Type}
+
+the method of input for selecting an item.
+
+\begin{DoxySeeAlso}{See also}
+select\+Choose\+Type 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/L\+C\+D\+Menu.\+h\end{DoxyCompactItemize}

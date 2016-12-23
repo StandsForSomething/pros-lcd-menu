@@ -1,0 +1,58 @@
+.TH "LCDItem" 3 "Wed Dec 21 2016" "PROS LCD Menu Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LCDItem \- holds the information for individual items, mainly the text to be displayed\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LCDMenu\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "char * \fBLCDText\fP"
+.br
+.ti -1c
+.RI "void(* \fBfunction\fP )()"
+.br
+.ti -1c
+.RI "\fBitemType\fP \fBitemType\fP"
+.br
+.ti -1c
+.RI "\fBLCDMenu\fP \fBsubMenu\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+holds the information for individual items, mainly the text to be displayed\&. 
+.SH "Field Documentation"
+.PP 
+.SS "void(* function) ()"
+a pointer to the function to be exacuted if this item is choosen (asuming one should be executed)\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBitemType\fP 
+.RE
+.PP
+
+.SS "\fBitemType\fP \fBitemType\fP"
+
+.PP
+\fBSee also:\fP
+.RS 4
+\fBitemType\fP 
+.RE
+.PP
+
+.SS "char* LCDText"
+the text to be displayed on the LCD\&. 
+.SS "\fBLCDMenu\fP subMenu"
+if this item is a sub menu, said sub menu will be stored here\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for PROS LCD Menu Library from the source code\&.

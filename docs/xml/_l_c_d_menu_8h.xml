@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_l_c_d_menu_8h" kind="file" language="C++">
+    <compoundname>LCDMenu.h</compoundname>
+    <innerclass refid="struct_l_c_d_menu" prot="public">LCDMenu</innerclass>
+    <innerclass refid="struct_l_c_d_item" prot="public">LCDItem</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" prot="public" static="no">
+        <name>selectChooseType</name>
+        <enumvalue id="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58af98a217f8aef9ec8f96eea9237ce3d21" prot="public">
+          <name>POTENTIOMETER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>use a potentiometer to select and/or choose an item the advantage of this being that the selection will be the same after the robot is turned off, making it useful for autonomous selection</para><para><simplesect kind="note"><para>should not be used choose sub menus.</para></simplesect>
+<simplesect kind="see"><para><ref refid="struct_l_c_d_menu_1ab58ecc3135bdf1f2198a918c52b3dad6" kindref="member">LCDMenu.selectionType</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="struct_l_c_d_menu_1a91177ef36dcf8cabe8e74a627755aaa2" kindref="member">LCDMenu.chooseType</ref> </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58a0bc814ee65c2e353e2d42e79b9d934e9" prot="public">
+          <name>DIGITAL_SENSOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>use a/some digital sensor(s) (probally bumber switches) to select and or choose items. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58ace3a63d63ab60c10382d216efd2e28a8" prot="public">
+          <name>LCD_BUTTONS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>use the items built into the LCD. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>each menu and sub-menu can be configured to use different types of input for item selection and choice. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>when an item is chosen, it&apos;s selected and it&apos;s function is executed or it&apos;s sub-menu displayed (see itemType) and is selected when <ref refid="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" kindref="member">LCDMenu.currentSelection</ref> is at the item&apos;s array index (<ref refid="struct_l_c_d_menu_1af6fd93180925837331f93529da0f9ce5" kindref="member">LCDMenu.LCDItems</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="12" column="1" bodyfile="include/LCDMenu.h" bodystart="12" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846fa" prot="public" static="no">
+        <name>itemType</name>
+        <enumvalue id="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faa9634a2ea914aef0b136ac9bcb5b5859b" prot="public">
+          <name>FUNCTION_EXEC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>exacute the function that <ref refid="struct_l_c_d_item_1a92c749b399f1281b6a38296730befc65" kindref="member">LCDItem.function</ref> points to when this item is chosen.</para><para><simplesect kind="see"><para>LCDMenu.function </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faaeffea8f1acf80a6b50f473a9cf630e37" prot="public">
+          <name>SUB_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>if <ref refid="struct_l_c_d_item_1ad628598d6019c8248dd0b161654253c8" kindref="member">LCDItem.itemType</ref> is set to this it means that there&apos;s a sub menu in <ref refid="struct_l_c_d_item_1af3cbf3c417e8237330132b5ab5448b16" kindref="member">LCDItem.subMenu</ref>.</para><para><simplesect kind="see"><para><ref refid="struct_l_c_d_item_1af3cbf3c417e8237330132b5ab5448b16" kindref="member">LCDItem.subMenu</ref> </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faa9a463d315e0659998bfc071cdd3df152" prot="public">
+          <name>SELECTION_ONLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>this means that the item is not a subMenu and does not have a function in the function pointer and thus cannot be chosen. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this enum show if an item can be choosen, and if it can wether or not it&apos;s a sub menu or if it executes a function.</para><para><simplesect kind="see"><para><ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="43" column="1" bodyfile="include/LCDMenu.h" bodystart="43" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_l_c_d_menu_8h_1a70536180beac160b7989181e2b242de5" prot="public" static="no">
+        <type>enum <ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref></type>
+        <definition>typedef enum selectChooseType selectChooseType</definition>
+        <argsstring></argsstring>
+        <name>selectChooseType</name>
+        <briefdescription>
+<para>each menu and sub-menu can be configured to use different types of input for item selection and choice. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>when an item is chosen, it&apos;s selected and it&apos;s function is executed or it&apos;s sub-menu displayed (see itemType) and is selected when <ref refid="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" kindref="member">LCDMenu.currentSelection</ref> is at the item&apos;s array index (<ref refid="struct_l_c_d_menu_1af6fd93180925837331f93529da0f9ce5" kindref="member">LCDMenu.LCDItems</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_l_c_d_menu_8h_1a1d3db213cb392a886eed37fe7f931a1a" prot="public" static="no">
+        <type>enum <ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846fa" kindref="member">itemType</ref></type>
+        <definition>typedef enum itemType itemType</definition>
+        <argsstring></argsstring>
+        <name>itemType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this enum show if an item can be choosen, and if it can wether or not it&apos;s a sub menu or if it executes a function.</para><para><simplesect kind="see"><para><ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_l_c_d_menu_8h_1afae8eb7f4a608ac548b354f510177b35" prot="public" static="no">
+        <type>struct <ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref></type>
+        <definition>typedef struct LCDItem LCDItem</definition>
+        <argsstring></argsstring>
+        <name>LCDItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>forward declaration/typedef of <ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref> struct </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="1" column="1" bodyfile="include/LCDMenu.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_l_c_d_menu_8h_1a11971d0405320ec0ca6571b97d06fca5" prot="public" static="no">
+        <type>struct <ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref></type>
+        <definition>typedef struct LCDMenu LCDMenu</definition>
+        <argsstring></argsstring>
+        <name>LCDMenu</name>
+        <briefdescription>
+<para>this hold all the variables needed for a <ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref> or sub menu. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="102" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_l_c_d_menu_8h_1a80833d02472394167834348533679f97" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref> *</type>
+        <definition>LCDItem* LCDMenuItems</definition>
+        <argsstring></argsstring>
+        <name>LCDMenuItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="133" column="1" bodyfile="src/LCDMenu.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_c_d_menu_8h_1a0e589f9054cc1ee0716a7ecda74b1352" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int currentSelection</definition>
+        <argsstring></argsstring>
+        <name>currentSelection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="134" column="1" bodyfile="src/LCDMenu.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_l_c_d_menu_8h_1ae18acacf43740d59484a1c156e4d819e" prot="public" static="no" mutable="no">
+        <type>sensor</type>
+        <definition>sensor selectionPot</definition>
+        <argsstring></argsstring>
+        <name>selectionPot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="135" column="1" bodyfile="src/LCDMenu.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_l_c_d_menu_8h_1ad1ba3d01ddd8d4bf88821b64cf8a8738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LCDMenuTask</definition>
+        <argsstring>(void *ignore)</argsstring>
+        <name>LCDMenuTask</name>
+        <param>
+          <type>void *</type>
+          <declname>ignore</declname>
+        </param>
+        <briefdescription>
+<para>this should be started as a task in initialize. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="140" column="1" bodyfile="src/LCDMenu.c" bodystart="15" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="_l_c_d_menu_8h_1aefa12ea894cc2907d17b17613b9b7165" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void newItem</definition>
+        <argsstring>(char *itemText, void(*itemFunction)())</argsstring>
+        <name>newItem</name>
+        <param>
+          <type>char *</type>
+          <declname>itemText</declname>
+        </param>
+        <param>
+          <type>void(*)()</type>
+          <declname>itemFunction</declname>
+        </param>
+        <briefdescription>
+<para>adds an item to the menu </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/LCDMenu.h" line="145" column="1" bodyfile="src/LCDMenu.c" bodystart="62" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LCDITEM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LCDITEM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58af98a217f8aef9ec8f96eea9237ce3d21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58af98a217f8aef9ec8f96eea9237ce3d21" kindref="member">POTENTIOMETER</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58a0bc814ee65c2e353e2d42e79b9d934e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58a0bc814ee65c2e353e2d42e79b9d934e9" kindref="member">DIGITAL_SENSOR</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58ace3a63d63ab60c10382d216efd2e28a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58ace3a63d63ab60c10382d216efd2e28a8" kindref="member">LCD_BUTTONS</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846fa" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846fa" kindref="member">itemType</ref><sp/>{</highlight></codeline>
+<codeline lineno="50" refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faa9634a2ea914aef0b136ac9bcb5b5859b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faa9634a2ea914aef0b136ac9bcb5b5859b" kindref="member">FUNCTION_EXEC</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faaeffea8f1acf80a6b50f473a9cf630e37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faaeffea8f1acf80a6b50f473a9cf630e37" kindref="member">SUB_MENU</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faa9a463d315e0659998bfc071cdd3df152" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846faa9a463d315e0659998bfc071cdd3df152" kindref="member">SELECTION_ONLY</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846fa" kindref="member">itemType</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_l_c_d_menu_8h_1afae8eb7f4a608ac548b354f510177b35" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref><sp/><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="struct_l_c_d_menu" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref><sp/>{</highlight></codeline>
+<codeline lineno="82" refid="struct_l_c_d_menu_1af6fd93180925837331f93529da0f9ce5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref><sp/>*<ref refid="struct_l_c_d_menu_1af6fd93180925837331f93529da0f9ce5" kindref="member">LCDItems</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="struct_l_c_d_menu_1ab58ecc3135bdf1f2198a918c52b3dad6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref><sp/><ref refid="struct_l_c_d_menu_1ab58ecc3135bdf1f2198a918c52b3dad6" kindref="member">selectionType</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="struct_l_c_d_menu_1a91177ef36dcf8cabe8e74a627755aaa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1ac9d30bf238ddf19edf16db21e5362e58" kindref="member">selectChooseType</ref><sp/><ref refid="struct_l_c_d_menu_1a91177ef36dcf8cabe8e74a627755aaa2" kindref="member">chooseType</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" kindref="member">currentSelection</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<ref refid="_l_c_d_menu_8h_1a11971d0405320ec0ca6571b97d06fca5" kindref="member">LCDMenu</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="struct_l_c_d_item" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref><sp/>{</highlight></codeline>
+<codeline lineno="112" refid="struct_l_c_d_item_1a3265d5a814cae9c1ce47d7e878c45c64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="struct_l_c_d_item_1a3265d5a814cae9c1ce47d7e878c45c64" kindref="member">LCDText</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="struct_l_c_d_item_1a92c749b399f1281b6a38296730befc65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>(*</highlight><highlight class="keyword">function</highlight><highlight class="normal">)();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="struct_l_c_d_item_1ad628598d6019c8248dd0b161654253c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_l_c_d_menu_8h_1a090b740ab4ce239469ae5916e79846fa" kindref="member">itemType</ref><sp/><ref refid="struct_l_c_d_item_1ad628598d6019c8248dd0b161654253c8" kindref="member">itemType</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="struct_l_c_d_item_1af3cbf3c417e8237330132b5ab5448b16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_c_d_menu" kindref="compound">LCDMenu</ref><sp/><ref refid="struct_l_c_d_item_1af3cbf3c417e8237330132b5ab5448b16" kindref="member">subMenu</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_l_c_d_item" kindref="compound">LCDItem</ref><sp/>*<ref refid="_l_c_d_menu_8h_1a80833d02472394167834348533679f97" kindref="member">LCDMenuItems</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_l_c_d_menu_1a0e589f9054cc1ee0716a7ecda74b1352" kindref="member">currentSelection</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>sensor<sp/><ref refid="_l_c_d_menu_8h_1ae18acacf43740d59484a1c156e4d819e" kindref="member">selectionPot</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_c_d_menu_8h_1ad1ba3d01ddd8d4bf88821b64cf8a8738" kindref="member">LCDMenuTask</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ignore);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_l_c_d_menu_8h_1aefa12ea894cc2907d17b17613b9b7165" kindref="member">newItem</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>itemText,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*itemFunction)());</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/LCDMenu.h"/>
+  </compounddef>
+</doxygen>
