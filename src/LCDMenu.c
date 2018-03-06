@@ -3,14 +3,14 @@
 
 size_t numOfItems = 0;
 LCDItem *LCDMenuItems = NULL;
-int currentSelection;
+int LCDMenuSelection;
 
 //divides all possible potentiometer values between all the items so that all
 //items have an equal size range of values where they're selected.
-int potSelectionSize;
+int selectionSize;
 int selectionRangeUpper;
 int selectionRangeLower;
-sensor selectionPot;
+int (*LCDSelectionSense)(void);
 
 void LCDMenuTask(void *ignore)
 {
@@ -21,17 +21,17 @@ void LCDMenuTask(void *ignore)
 
     while(true)
     {
-        selectionRangeUpper = potSelectionSize;
+        selectionRangeUpper = selectionSize;
         selectionRangeLower = 0;
         //loop through all the items to decide what should be displayed
         for(int i = 0; i < numOfItems; i++)
         {
             //if the potentiometer is within the selection range of item i
-            if(getSensor(selectionPot) >= selectionRangeLower &&
-               getSensor(selectionPot) <= selectionRangeUpper)
+            if(LCDSelectionSense() >= selectionRangeLower &&
+               LCDSelectionSense() <= selectionRangeUpper)
             {
                 //change the current selection to i
-                currentSelection = i;
+                LCDMenuSelection = i;
 
                 //display the selection on line 1 of the LCD pluged int uart1
                 lcdPrint(uart1, 1, "%c %s", LCD_POINTER_CHAR,
@@ -53,7 +53,7 @@ void LCDMenuTask(void *ignore)
 
             //set the selection range for i+1
             selectionRangeLower = selectionRangeUpper;
-            selectionRangeUpper += potSelectionSize;
+            selectionRangeUpper += selectionSize;
         }
         delay(20);
     }
@@ -65,5 +65,5 @@ void newItem(char* itemText, void (*itemFunction)())
     LCDMenuItems = realloc(LCDMenuItems, numOfItems * sizeof *LCDMenuItems);
     LCDMenuItems[numOfItems-1].LCDText = itemText;
     LCDMenuItems[numOfItems-1].function = itemFunction;
-    potSelectionSize = 4095 / numOfItems;
+    selectionSize = 4095 / numOfItems;
 }

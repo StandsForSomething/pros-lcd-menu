@@ -131,8 +131,9 @@ struct LCDItem {
 };
 
 extern LCDItem *LCDMenuItems;
-extern int currentSelection;
-extern sensor selectionPot;
+extern int LCDMenuSelection;
+
+extern int (*LCDSelectionSense)(void);
 
 /**
  * @brief this should be started as a task in initialize.
